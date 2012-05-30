@@ -1,0 +1,17 @@
+<li id="ning">
+	
+	<h2 class="widgettitle">
+		<a title="" href="http://goodfornoth.ning.com" class="rsswidget">Ning-tivity</a>
+	</h2>
+		
+	{IF_ERROR_BEGIN}<p class="error">{ERROR_MESSAGE}</p>{IF_ERROR_END}
+<ul>
+	{ITEM_LOOP_BEGIN}
+		<li><a href="{ITEM_PERMALINK}"> 	
+		{TRUNCATE_ITEM_DESCRIPTION}&nbsp;
+		</a>
+		<span class="date">{ITEM_DATE}</span>
+		</li>
+	{ITEM_LOOP_END}
+</ul>
+</li>
