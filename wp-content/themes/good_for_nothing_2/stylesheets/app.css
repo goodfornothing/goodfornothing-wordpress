@@ -518,3 +518,28 @@ div.comment-reply-link {
 .error404 #s {
 	background-color:#EEEBE5
 }
+
+/* Post typography */
+
+	.single .date-author { margin-bottom: 20px; }
+
+	.entry p {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	
+	.entry h2 {
+		text-transform:none;
+		margin-bottom: 16px;
+		font-size: 34px;
+		line-height: 51px;
+	}
+	
+	.entry h3 {
+		text-transform:none;
+		margin-bottom: 20px;
+		font-size: 20px;
+		color: #222;
+		font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, 'Lucida Grande', sans-serif;
+	}
+	

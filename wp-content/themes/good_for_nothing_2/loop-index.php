@@ -9,11 +9,16 @@
 	
 	<?php if ( is_home() ) {
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	query_posts($query_string . '&cat=-25,-78,-82,-84&paged='.$paged);
+	query_posts($query_string . '&paged='.$paged);
 	} ?>
 	
 	<!-- Start the Loop -->	
 	<?php if ( have_posts() ) : ?>
+		
+		<?php 
+		//if ( !is_home() ) { $category = get_the_category(); ?>
+		<!--<h1><?php //echo $category[0]->cat_name ?></h1>-->
+		<?php //} ?>
 		
 		<!-- Open the first row -->
 		<?php echo '<div class="row">'; ?>
@@ -30,7 +35,7 @@
 			
 			<!-- Display the Post's category. -->
 			<?php if ( is_home() ) { 
-				$category = get_the_category(); 
+				$category = get_the_category();
 				if($category[0]){
 				echo '<span class="article-category"><a href="'.get_category_link($category[0]->term_id ).'" class="'.$category[0]->category_nicename.'">'.$category[0]->cat_name.'</a></span>';
 				}
